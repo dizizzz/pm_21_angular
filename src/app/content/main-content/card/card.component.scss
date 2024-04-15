@@ -1,0 +1,57 @@
+.card {
+  width: 308px; 
+  height: 180px;  
+  background-color: #2d2e2d;
+  border-radius: 20px;
+
+  .col {
+    padding-left: 23px;
+    padding-top: 12px;
+
+    span.balance {
+      font-size: 20px;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 51px;
+      letter-spacing: 3px;
+    }
+
+    span.currency {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.551);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 51px;
+    }
+
+    span.number-card {
+      display: block;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.379);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      line-height: 48px;
+      letter-spacing: 4px;
+    }
+
+    span.expiration-date {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.379);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 48px;
+    }
+  }
+  img {
+    position: absolute;
+    bottom: 29px;
+    right: 26px;
+
+    &.second-image {
+      top: 29px;
+      right: 26px;
+    }
+  }
+}

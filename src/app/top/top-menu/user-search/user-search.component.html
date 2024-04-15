@@ -1,0 +1,12 @@
+<div class="user-search-container">
+  <span class="hello">Hello, Nik!</span>
+  <div class="search-button" id="searchButton" [class.expanded]="isSearchBarExpanded">
+    <img src="assets/imgs/magnifying-glass-browser.svg" alt="Search Icon" (click)="toggleSearchBar()">
+    <button type="button" (click)="toggleSearchBar()"></button>  
+    <input type="text" [(ngModel)]="searchText" *ngIf="isSearchBarExpanded" placeholder="Type to search...">
+  </div>
+  <div class="user-avatar">
+    <img src="assets/imgs/avatar.svg" alt="User Avatar">
+    <span class="badge"></span>
+  </div>
+</div>

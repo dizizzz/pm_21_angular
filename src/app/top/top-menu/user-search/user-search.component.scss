@@ -1,0 +1,97 @@
+.user-search-container {
+  display: flex;
+  margin-left: auto;
+  align-items: center; 
+  position: relative;
+
+  span.hello {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.379);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-right: 55px;
+  }
+
+  .search-button {
+    position: absolute;
+    background-color: #363636;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    width: 69px; 
+    height: 30px; 
+    right: 10px;
+    overflow: hidden;
+    transition: right 0.3s ease, width 0.3s ease;
+
+    img {
+      margin-left: 10px;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 35px;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      font-size: 14px;
+      background-color: #363636;
+      color: white;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 40px; 
+      width: calc(100% - 40px); 
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      color: white;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease; 
+    }
+  }
+
+  .search-button.expanded {
+    right: 0;
+    width: 200px; // задайте більшу ширину для розширеної кнопки пошуку
+
+    input {
+      opacity: 1; // показати текстове поле для пошуку
+    }
+  }
+  
+  .user-avatar {
+    width: 35px; 
+    height: 35px; 
+    border-radius: 50%; 
+    background-color: #ccc;
+    overflow: hidden;
+    right: 0;
+    z-index: 3;
+
+    span.badge {
+      position: absolute;
+      top: 7px;
+      right: -8px;
+      transform: translate(-50%, -50%);
+      padding: 1px;
+      background-color: #dc3545; 
+      border: 3px solid #dc3545;
+      border-radius: 50px;
+      width: 8px; 
+      height: 8px;
+      display: flex;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 1px 4px #dc35462b;
+     
+    }
+  }
+}

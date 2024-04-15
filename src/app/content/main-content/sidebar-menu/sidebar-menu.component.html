@@ -1,0 +1,14 @@
+<div class="sidebar-menu">
+  <nav class="navbar">
+    <ul class="navbar-nav d-flex flex-column">
+      <sidebar-menu-items 
+        *ngFor="let item of menuItems; let i = index"
+        [iconSrc]="item.iconSrc" 
+        [label]="item.label" 
+        [isActive]="i === activeItemIndex"
+        [isNextActive]="i === activeItemIndex + 1 && i !== menuItems.length - 1"
+        (itemClicked)="handleItemClicked(i)">
+      </sidebar-menu-items>
+    </ul>
+  </nav>
+</div>

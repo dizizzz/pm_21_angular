@@ -1,0 +1,6 @@
+<li class="nav-item" [class.active]="isActive" [class.nextActive]="isNextActive">
+  <div class="d-flex justify-content-center align-items-center" (click)="toggleActive()">
+    <img [src]="iconSrc" [alt]="label">
+  </div>
+  <a class="nav-link text-center" href="#" (click)="toggleActive()">{{ label }}</a>
+</li>

@@ -1,0 +1,54 @@
+<div class="history">
+  <div class="card-header d-flex">
+    <div class="transaction">Transaction history</div>
+    <div class="dropdown ms-auto">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+      [class.open]="isCurrencyDropdownOpen" (click)="toggleCurrencyDropdown()">
+        Any currency
+      </button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" type="button">Action</button></li>
+        <li><button class="dropdown-item" type="button">Another action</button></li>
+        <li><button class="dropdown-item" type="button">Something else here</button></li>
+      </ul>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+      [class.open]="isCategoriesDropdownOpen" (click)="toggleCategoriesDropdown()">
+        Any categories
+      </button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" type="button">Action</button></li>
+        <li><button class="dropdown-item" type="button">Another action</button></li>
+        <li><button class="dropdown-item" type="button">Something else here</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="card-footer">
+    <div class="col-12">
+      <div class="date">December 31</div>
+      <transaction iconSrc="assets\imgs\lemonade.svg" operation="'Food & Drinks' restaurant" procedure="Cafe and restaurants" cardnum="Card: **3478" sum="- 480" currency="UAH" [income]="false"></transaction>
+      <transaction iconSrc="assets\imgs\shopping-basket.svg" operation="'Walmart' store (Main Str. 13)" procedure="Groceries & food" cardnum="Card: **7813" sum="- 80" currency="USD" [income]="false"></transaction>
+      <transaction iconSrc="assets\imgs\alexey.svg" operation="Transfer from Alexey" procedure="Transactions" cardnum="To card: **3478" sum="6000" currency="UAH" [income]="true"></transaction>
+
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="col-12">
+      <div class="date">December 29</div>
+      <transaction iconSrc="assets\imgs\shopping-bag.svg" operation="'Zara Man' store" procedure="Clothes & shoes" cardnum="Card: **7324" sum="- 230" currency="EUR" [income]="false"></transaction>
+      <transaction iconSrc="assets\imgs\download-1.svg" operation="Replenishment from 'iTerminal N861'" procedure="Transactions" cardnum="Card: **3478" sum="8000" currency="UAH" [income]="true"></transaction>
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="col-12">
+      <div class="date">December 24</div>
+      <transaction iconSrc="assets\imgs\car-1.svg" operation="'Shell' gas station (Street Ave. 24)" procedure="Vehicle & transport" cardnum="Card: **7324" sum="- 280" currency="EUR" [income]="false"></transaction>
+      <transaction iconSrc="assets\imgs\wifi-3.svg" operation="Phone +380502338325 'Vodafone'" procedure="Mobile & internet" cardnum="Card: **3478" sum="- 301" currency="UAH" [income]="false"></transaction>
+      <transaction iconSrc="assets\imgs\flash.svg" operation="'General Electric' housing services" procedure="House and services" cardnum="Card: **7813" sum="- 540" currency="USD" [income]="false"></transaction>
+    </div>
+  </div>
+</div>

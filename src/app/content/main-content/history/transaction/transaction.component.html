@@ -1,0 +1,16 @@
+<div class="transaction" [ngClass]="{ 'income': income }">
+  <div class="col-10">
+    <div class="icon">
+      <img [src]="iconSrc" alt="icon">
+    </div>
+    <div class="spans">
+      <span class="operation">{{ operation }}</span>
+      <span class="procedure">{{ procedure }}</span>
+      <span class="cardnum">{{ cardnum }}</span>
+    </div>
+  </div>
+  <div class="col-2">
+    <span class="sum" [ngClass]="{ 'sum-add': income }">{{ sum }}</span>
+    <span class="currency" >{{ currency }}</span>
+  </div>
+</div>
