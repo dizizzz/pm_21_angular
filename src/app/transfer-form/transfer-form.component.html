@@ -1,0 +1,38 @@
+<div class="modal fade show" style="display: block;" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Transfer Money</h5>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="closeModal.emit()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <div class="form">
+          <form>
+            <div class="form-group">
+              <label for="senderAccount">Sender Account:</label>
+              <input type="text" class="form-control" id="senderAccount" [(ngModel)]="senderAccount" name="senderAccount" required>
+            </div>
+            <div class="form-group">
+              <label for="receiverAccount">Receiver Account:</label>
+              <input type="text" class="form-control" id="receiverAccount" [(ngModel)]="receiverAccount" name="receiverAccount" required>
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="number" class="form-control" id="amount" [(ngModel)]="amount" name="amount" required>
+            </div>
+            <div class="form-group">
+              <label for="currency">Currency:</label>
+              <input type="text" class="form-control" id="currency" [(ngModel)]="currency" name="currency" required>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal.emit()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="submitTransfer()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

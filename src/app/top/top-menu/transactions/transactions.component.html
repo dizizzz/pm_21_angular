@@ -1,6 +1,6 @@
 <div class="transactions">
   <ul class="nav justify-content-end">
-    <div class="transfer">
+    <div class="transfer" (click)="onShowTransferForm()">
       <transaction-item label="MONEY TRANSFER" link="#"></transaction-item>
     </div>
     <div class="charge">
@@ -10,4 +10,8 @@
       <transaction-item label="REPLENISH CARD" link="#"></transaction-item>
     </div>
   </ul>
+</div>
+
+<div *ngIf="showTransferForm">
+  <transfer-form (closeModal)="onCloseModal()"></transfer-form>
 </div>

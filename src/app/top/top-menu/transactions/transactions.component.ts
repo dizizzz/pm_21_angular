@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './transactions.component.scss'
 })
 export class TransactionsComponent {
+  showTransferForm: boolean = false;
 
+  onCloseModal(): void {
+    this.showTransferForm = false;
+  }
+
+  onShowTransferForm(): void {
+    this.showTransferForm = true;
+  }
 }

@@ -27,6 +27,21 @@
 
   <div class="card-footer">
     <div class="col-12">
+      <div class="date">Today</div>
+      <div class *ngFor="let transaction of transactions">
+        <ng-container *ngIf="transaction.receiverAccount === 'Nik'">
+          <transaction
+          iconSrc="assets\imgs\download-1.svg"
+          [operation]="'Transfer from ' + transaction.senderAccount"
+          [procedure]="'Transactions'"
+          [cardnum]="'To card: ' + transaction.receiverAccount"
+          [sum]="transaction.amount.toString()"
+          [currency]="transaction.currency"
+          [income]="true"
+        ></transaction>
+        </ng-container>
+    </div>
+    <div class="col-12">
       <div class="date">December 31</div>
       <transaction iconSrc="assets\imgs\lemonade.svg" operation="'Food & Drinks' restaurant" procedure="Cafe and restaurants" cardnum="Card: **3478" sum="- 480" currency="UAH" [income]="false"></transaction>
       <transaction iconSrc="assets\imgs\shopping-basket.svg" operation="'Walmart' store (Main Str. 13)" procedure="Groceries & food" cardnum="Card: **7813" sum="- 80" currency="USD" [income]="false"></transaction>

@@ -7,6 +7,9 @@ import { TopMenuCourseColComponent } from "./top-menu/top-menu-course/top-menu-c
 import { TransactionsComponent } from "./top-menu/transactions/transactions.component";
 import { TransactionItemComponent } from "./top-menu/transactions/transaction-item/transaction-item.component";
 import { UserSearchComponent } from "./top-menu/user-search/user-search.component";
+import { TransferFormComponent } from "../transfer-form/transfer-form.component";
+import { HttpClientModule } from '@angular/common/http';
+import { TransferService } from "../services/transfer.service";
 
 @NgModule({
   declarations: [
@@ -15,17 +18,23 @@ import { UserSearchComponent } from "./top-menu/user-search/user-search.componen
     TopMenuCourseColComponent,
     TransactionsComponent,
     TransactionItemComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    TransferFormComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    TransferService
   ],
   exports: [
     TopMenuComponent,
     TopMenuCourseComponent,
     TransactionsComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    TransferFormComponent
   ]
 })
 export class TopModule {}

@@ -17,6 +17,7 @@ export class ExpenseCategoriesComponent implements OnInit {
 
   isCurrencyDropdownOpen: boolean = false;
   activeCategory: string = 'week';
+  doughnutData: any[] = [];
 
   toggleCurrencyDropdown() {
     this.isCurrencyDropdownOpen = !this.isCurrencyDropdownOpen;
@@ -24,6 +25,7 @@ export class ExpenseCategoriesComponent implements OnInit {
   
   setActiveCategory(category: string) {
     this.activeCategory = category;
+    this.updateChartData();
   }
 
   async getData(selectedOption: any, dataType: any) {
@@ -41,11 +43,29 @@ export class ExpenseCategoriesComponent implements OnInit {
     }
   }
 
+  async updateChartData() {
+    const doughnut = this.document.querySelector(".card-chart #doughnut") as HTMLCanvasElement; 
+
+    const doughnutData = await this.getData(this.activeCategory, 'doughnut'); 
+    this.doughnutData = doughnutData;
+    
+    const chart = Chart.getChart(doughnut);
+    chart.data.labels = doughnutData.map((item: any) => item.label);
+    chart.data.datasets[0].data = doughnutData.map((item: any) => item.value);
+
+    chart.update();
+  }
+
+  getCategoryValue(label: string): number {
+    const category = this.doughnutData.find(item => item.label === label);
+    return category ? category.value : 0;
+  }
+
   async buildChart() {
-    const doughnut = this.document.querySelector(".card-chart #doughnut") as HTMLCanvasElement; // Cast to HTMLCanvasElement
+    const doughnut = this.document.querySelector(".card-chart #doughnut") as HTMLCanvasElement; 
     
     const doughnutData = await this.getData('week', 'doughnut');
-    console.log('doughnut:', doughnutData);
+    this.doughnutData = doughnutData;
 
     const customColors = [
       '#56bf64',

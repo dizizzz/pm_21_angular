@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 
 declare const Chart: any;
 
@@ -25,6 +25,7 @@ export class BalanceSummaryComponent implements OnInit {
 
   setActiveBalance(balance: string) {
     this.activeBalance = balance;
+    this.updateChartData();
   }
 
   async getData(selectedOption: any, dataType: any) {
@@ -42,8 +43,30 @@ export class BalanceSummaryComponent implements OnInit {
     }
   }
 
+  async updateChartData() {
+    const line = this.document.querySelector(".card-chart #line") as HTMLCanvasElement;
+    if (!line) {
+      throw new Error('Canvas element not found');
+    }
+
+    const ctx = line.getContext("2d");
+    if (!ctx) {
+      throw new Error('Canvas context not found');
+    }
+    
+    const lineData = await this.getData(this.activeBalance, 'line'); 
+
+    
+    const chart = Chart.getChart(line);
+    
+    chart.data.labels = lineData.map((item: any) => item.label);
+    chart.data.datasets[0].data = lineData.map((item: any) => item.value);
+    
+    chart.update();
+  }
+
   async buildChart() {
-    const line = this.document.querySelector(".card-chart #line") as HTMLCanvasElement; // Cast to HTMLCanvasElement
+    const line = this.document.querySelector(".card-chart #line") as HTMLCanvasElement; 
     if (!line) {
       throw new Error('Canvas element not found');
     }
@@ -58,7 +81,7 @@ export class BalanceSummaryComponent implements OnInit {
 
     // Встановлюємо точки для всіх значень, окрім останнього, на 0
     const pointRadiusValues = Array(lineData.length - 1).fill(0);
-    pointRadiusValues.push(6);
+    //pointRadiusValues.push(6);
       
 
     // Створюємо градієнт
