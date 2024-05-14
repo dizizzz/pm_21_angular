@@ -1,0 +1,84 @@
+{
+  "week": {
+    "doughnutData": [
+      {"label": "Other expenses", "value": 9},
+      {"label": "Clothes and shoes", "value": 18},
+      {"label": "Vehicle and transport", "value": 25},
+      {"label": "Mobile and internet", "value": 15},
+      {"label": "House and services", "value": 10},
+      {"label": "Groceries and food", "value": 25},
+      {"label": "Cafe and restaurants", "value": 16}
+    ],
+    "lineData": [
+      {"label": "Mon", "value": 16.5},
+      {"label": "Tue", "value": 26},
+      {"label": "Wed", "value": 24.5},
+      {"label": "Thu", "value": 32},
+      {"label": "Fri", "value": 27.6},
+      {"label": "Sat", "value": 31},
+      {"label": "Sun", "value": 29}
+    ]
+  },
+  "month": {
+    "doughnutData": [
+      {"label": "Other expenses", "value": 30},
+      {"label": "Clothes and shoes", "value": 20},
+      {"label": "Vehicle and transport", "value": 15},
+      {"label": "Mobile and internet", "value": 10},
+      {"label": "House and services", "value": 12},
+      {"label": "Groceries and food", "value": 27},
+      {"label": "Cafe and restaurants", "value": 20}
+    ],
+    "lineData": [
+      {"label": "Jan", "value": 15},
+      {"label": "Feb", "value": 21},
+      {"label": "Mar", "value": 25},
+      {"label": "Apr", "value": 20},
+      {"label": "May", "value": 25},
+      {"label": "Jun", "value": 18},
+      {"label": "Jul", "value": 24},
+      {"label": "Aug", "value": 31},
+      {"label": "Sep", "value": 19},
+      {"label": "Oct", "value": 17},
+      {"label": "Nov", "value": 23},
+      {"label": "Dec", "value": 16}
+    ]
+  },
+  "year": {
+    "doughnutData": [
+      {"label": "Other expenses", "value": 20},
+      {"label": "Clothes and shoes", "value": 25},
+      {"label": "Vehicle and transport", "value": 35},
+      {"label": "Mobile and internet", "value": 20},
+      {"label": "House and services", "value": 15},
+      {"label": "Groceries and food", "value": 30},
+      {"label": "Cafe and restaurants", "value": 25}
+    ],
+    "lineData": [
+      {"label": 2010, "value": 10},
+      {"label": 2011, "value": 20},
+      {"label": 2012, "value": 15},
+      {"label": 2013, "value": 25},
+      {"label": 2014, "value": 22},
+      {"label": 2015, "value": 30},
+      {"label": 2016, "value": 28}
+    ]
+  },
+  "other": {
+    "doughnutData": [
+      {"label": "Other expenses", "value": 12},
+      {"label": "Clothes and shoes", "value": 24},
+      {"label": "Vehicle and transport", "value": 14},
+      {"label": "Mobile and internet", "value": 30},
+      {"label": "House and services", "value": 21},
+      {"label": "Groceries and food", "value": 27},
+      {"label": "Cafe and restaurants", "value": 18}
+    ],
+    "lineData": [
+      {"label": "Morning", "value": 19},
+      {"label": "Afternoon", "value": 31},
+      {"label": "Evening", "value": 33},
+      {"label": "Night", "value": 15}
+    ]
+  }
+}
