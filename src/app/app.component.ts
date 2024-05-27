@@ -8,7 +8,7 @@ import { TopModule } from './top/top.module';
   standalone: true,
   imports: [RouterOutlet, TopModule, ContentModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'monobank';

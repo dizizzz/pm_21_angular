@@ -22,10 +22,6 @@ export class TransferService {
     return this.http.get<TransferDto[]>(`${this.baseUrl}`);
   }
 
-  // getAllTransfers(): Observable<any> {
-  //   return this.http.get(`http://localhost:8080/transfers`, {headers: {'Content-Type': 'application/json'}});
-  // }
-
   // Відправлення GET-запиту для отримання трансферу за ID
   getTransferById(id: number): Observable<TransferDto> {
     return this.http.get<TransferDto>(`${this.baseUrl}/${id}`);
